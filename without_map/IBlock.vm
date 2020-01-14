@@ -1,0 +1,1420 @@
+function IBlock.new 0
+push constant 3
+call Memory.alloc 1
+pop pointer 0
+push pointer 0
+return
+function IBlock.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function IBlock.create_block 0
+push argument 0
+pop pointer 0
+push constant 0
+pop this 0
+push constant 3
+pop this 1
+push constant 0
+pop this 2
+push argument 1
+push this 0
+push this 1
+call Map.read 3
+push constant 1
+eq
+push argument 1
+push this 0
+push this 1
+push constant 1
+add
+call Map.read 3
+push constant 1
+eq
+or
+push argument 1
+push this 0
+push this 1
+push constant 2
+add
+call Map.read 3
+push constant 1
+eq
+or
+push argument 1
+push this 0
+push this 1
+push constant 3
+add
+call Map.read 3
+push constant 1
+eq
+or
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+return
+label IF_FALSE0
+push argument 2
+push constant 0
+call Block.setR 2
+pop temp 0
+push argument 2
+push constant 3
+call Block.setC 2
+pop temp 0
+push argument 1
+push this 0
+push this 1
+call Map.set 3
+pop temp 0
+push argument 1
+push this 0
+push this 1
+push constant 1
+add
+call Map.set 3
+pop temp 0
+push argument 1
+push this 0
+push this 1
+push constant 2
+add
+call Map.set 3
+pop temp 0
+push argument 1
+push this 0
+push this 1
+push constant 3
+add
+call Map.set 3
+pop temp 0
+push constant 1
+return
+function IBlock.I_rotate 3
+push argument 0
+pop pointer 0
+push argument 2
+call Block.getR 1
+pop local 0
+push argument 2
+call Block.getC 1
+pop local 1
+push argument 1
+push local 0
+push local 1
+push constant 1
+add
+call Map.read 3
+push constant 1
+eq
+push argument 1
+push local 0
+push local 1
+call Map.read 3
+push constant 1
+eq
+and
+push argument 1
+push local 0
+push local 1
+push constant 2
+add
+call Map.read 3
+push constant 1
+eq
+and
+push argument 1
+push local 0
+push local 1
+push constant 3
+add
+call Map.read 3
+push constant 1
+eq
+and
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+pop this 2
+label IF_FALSE0
+push argument 1
+push local 0
+push constant 1
+sub
+push local 1
+call Map.read 3
+push constant 1
+eq
+push argument 1
+push local 0
+push local 1
+call Map.read 3
+push constant 1
+eq
+and
+push argument 1
+push local 0
+push constant 2
+sub
+push local 1
+call Map.read 3
+push constant 1
+eq
+and
+push argument 1
+push local 0
+push constant 3
+sub
+push local 1
+call Map.read 3
+push constant 1
+eq
+and
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 1
+pop this 2
+label IF_FALSE1
+push this 2
+push constant 0
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push local 0
+push constant 3
+gt
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push argument 1
+push local 0
+push constant 1
+sub
+push local 1
+call Map.read 3
+push constant 1
+eq
+push argument 1
+push local 0
+push constant 2
+sub
+push local 1
+call Map.read 3
+push constant 1
+eq
+or
+push argument 1
+push local 0
+push constant 3
+sub
+push local 1
+call Map.read 3
+push constant 1
+eq
+or
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 0
+return
+label IF_FALSE4
+push argument 1
+push local 0
+push local 1
+push constant 1
+add
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 2
+add
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 3
+add
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 1
+sub
+push local 1
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 2
+sub
+push local 1
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 3
+sub
+push local 1
+call Map.set 3
+pop temp 0
+push constant 1
+pop this 2
+goto IF_END3
+label IF_FALSE3
+push local 0
+push constant 0
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push argument 1
+push constant 1
+push local 1
+call Map.read 3
+push constant 1
+eq
+push argument 1
+push constant 2
+push local 1
+call Map.read 3
+push constant 1
+eq
+or
+push argument 1
+push constant 3
+push local 1
+call Map.read 3
+push constant 1
+eq
+or
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push constant 0
+return
+label IF_FALSE6
+label IF_FALSE5
+push local 0
+push constant 1
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push argument 1
+push constant 0
+push local 1
+call Map.read 3
+push constant 1
+eq
+push argument 1
+push constant 2
+push local 1
+call Map.read 3
+push constant 1
+eq
+or
+push argument 1
+push constant 3
+push local 1
+call Map.read 3
+push constant 1
+eq
+or
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 0
+return
+label IF_FALSE8
+label IF_FALSE7
+push local 0
+push constant 2
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push argument 1
+push constant 1
+push local 1
+call Map.read 3
+push constant 1
+eq
+push argument 1
+push constant 0
+push local 1
+call Map.read 3
+push constant 1
+eq
+or
+push argument 1
+push constant 3
+push local 1
+call Map.read 3
+push constant 1
+eq
+or
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push constant 0
+return
+label IF_FALSE10
+label IF_FALSE9
+push argument 1
+push local 0
+push local 1
+push constant 1
+add
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 2
+add
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 3
+add
+call Map.reset 3
+pop temp 0
+push argument 1
+push constant 0
+push local 1
+call Map.set 3
+pop temp 0
+push argument 1
+push constant 1
+push local 1
+call Map.set 3
+pop temp 0
+push argument 1
+push constant 2
+push local 1
+call Map.set 3
+pop temp 0
+push argument 1
+push constant 3
+push local 1
+call Map.set 3
+pop temp 0
+push argument 2
+push constant 3
+call Block.setR 2
+pop temp 0
+push constant 1
+pop this 2
+label IF_END3
+push constant 0
+return
+label IF_FALSE2
+push this 2
+push constant 1
+eq
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push local 1
+push constant 6
+lt
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push argument 1
+push local 0
+push local 1
+push constant 1
+add
+call Map.read 3
+push constant 1
+eq
+push argument 1
+push local 0
+push local 1
+push constant 2
+add
+call Map.read 3
+push constant 1
+eq
+or
+push argument 1
+push local 0
+push local 1
+push constant 3
+add
+call Map.read 3
+push constant 1
+eq
+or
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push constant 0
+return
+label IF_FALSE13
+push argument 1
+push local 0
+push constant 1
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 2
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 3
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 1
+add
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 2
+add
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 3
+add
+call Map.set 3
+pop temp 0
+push constant 0
+pop this 2
+goto IF_END12
+label IF_FALSE12
+push local 1
+push constant 9
+eq
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+push argument 1
+push local 0
+push constant 6
+call Map.read 3
+push constant 1
+eq
+push argument 1
+push local 0
+push constant 7
+call Map.read 3
+push constant 1
+eq
+or
+push argument 1
+push local 0
+push constant 8
+call Map.read 3
+push constant 1
+eq
+or
+if-goto IF_TRUE15
+goto IF_FALSE15
+label IF_TRUE15
+push constant 0
+return
+label IF_FALSE15
+label IF_FALSE14
+push local 1
+push constant 8
+eq
+if-goto IF_TRUE16
+goto IF_FALSE16
+label IF_TRUE16
+push argument 1
+push local 0
+push constant 6
+call Map.read 3
+push constant 1
+eq
+push argument 1
+push local 0
+push constant 7
+call Map.read 3
+push constant 1
+eq
+or
+push argument 1
+push local 0
+push constant 9
+call Map.read 3
+push constant 1
+eq
+or
+if-goto IF_TRUE17
+goto IF_FALSE17
+label IF_TRUE17
+push constant 0
+return
+label IF_FALSE17
+label IF_FALSE16
+push local 1
+push constant 7
+eq
+if-goto IF_TRUE18
+goto IF_FALSE18
+label IF_TRUE18
+push argument 1
+push local 0
+push constant 6
+call Map.read 3
+push constant 1
+eq
+push argument 1
+push local 0
+push constant 9
+call Map.read 3
+push constant 1
+eq
+or
+push argument 1
+push local 0
+push constant 8
+call Map.read 3
+push constant 1
+eq
+or
+if-goto IF_TRUE19
+goto IF_FALSE19
+label IF_TRUE19
+push constant 0
+return
+label IF_FALSE19
+label IF_FALSE18
+push argument 1
+push local 0
+push constant 1
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 2
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 3
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 6
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 7
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 8
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 9
+call Map.set 3
+pop temp 0
+push argument 2
+push constant 6
+call Block.setC 2
+pop temp 0
+push constant 0
+pop this 2
+label IF_END12
+push constant 0
+return
+label IF_FALSE11
+push constant 0
+return
+function IBlock.left 2
+push argument 0
+pop pointer 0
+push argument 2
+call Block.getR 1
+pop local 0
+push argument 2
+call Block.getC 1
+pop local 1
+push this 2
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 1
+push constant 0
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+return
+label IF_FALSE1
+push argument 1
+push local 0
+push local 1
+push constant 1
+sub
+call Map.read 3
+push constant 0
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push argument 1
+push local 0
+push local 1
+push constant 1
+sub
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 3
+add
+call Map.reset 3
+pop temp 0
+push argument 2
+push local 1
+push constant 1
+sub
+call Block.setC 2
+pop temp 0
+label IF_FALSE2
+label IF_FALSE0
+push this 2
+push constant 1
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push local 1
+push constant 0
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 0
+return
+label IF_FALSE4
+push argument 1
+push local 0
+push local 1
+push constant 1
+sub
+call Map.read 3
+push constant 0
+eq
+push argument 1
+push local 0
+push constant 1
+sub
+push local 1
+push constant 1
+sub
+call Map.read 3
+push constant 0
+eq
+and
+push argument 1
+push local 0
+push constant 2
+sub
+push local 1
+push constant 1
+sub
+call Map.read 3
+push constant 0
+eq
+and
+push argument 1
+push local 0
+push constant 3
+sub
+push local 1
+push constant 1
+sub
+call Map.read 3
+push constant 0
+eq
+and
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push argument 1
+push local 0
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 1
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 2
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 3
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 1
+sub
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 1
+sub
+push local 1
+push constant 1
+sub
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 2
+sub
+push local 1
+push constant 1
+sub
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 3
+sub
+push local 1
+push constant 1
+sub
+call Map.set 3
+pop temp 0
+push argument 2
+push local 1
+push constant 1
+sub
+call Block.setC 2
+pop temp 0
+label IF_FALSE5
+label IF_FALSE3
+push constant 0
+return
+function IBlock.right 2
+push argument 0
+pop pointer 0
+push argument 2
+call Block.getR 1
+pop local 0
+push argument 2
+call Block.getC 1
+pop local 1
+push this 2
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 1
+push constant 6
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+return
+label IF_FALSE1
+push argument 1
+push local 0
+push local 1
+push constant 4
+add
+call Map.read 3
+push constant 0
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push argument 1
+push local 0
+push local 1
+push constant 4
+add
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 2
+push local 1
+push constant 1
+add
+call Block.setC 2
+pop temp 0
+label IF_FALSE2
+label IF_FALSE0
+push this 2
+push constant 1
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push local 1
+push constant 9
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 0
+return
+label IF_FALSE4
+push argument 1
+push local 0
+push local 1
+push constant 1
+add
+call Map.read 3
+push constant 0
+eq
+push argument 1
+push local 0
+push constant 1
+sub
+push local 1
+push constant 1
+add
+call Map.read 3
+push constant 0
+eq
+and
+push argument 1
+push local 0
+push constant 2
+sub
+push local 1
+push constant 1
+add
+call Map.read 3
+push constant 0
+eq
+and
+push argument 1
+push local 0
+push constant 3
+sub
+push local 1
+push constant 1
+add
+call Map.read 3
+push constant 0
+eq
+and
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push argument 1
+push local 0
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 1
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 2
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 3
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 1
+add
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 1
+sub
+push local 1
+push constant 1
+add
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 2
+sub
+push local 1
+push constant 1
+add
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 3
+sub
+push local 1
+push constant 1
+add
+call Map.set 3
+pop temp 0
+push argument 2
+push local 1
+push constant 1
+add
+call Block.setC 2
+pop temp 0
+label IF_FALSE5
+label IF_FALSE3
+push constant 0
+return
+function IBlock.down 2
+push argument 0
+pop pointer 0
+push argument 2
+call Block.getR 1
+pop local 0
+push argument 2
+call Block.getC 1
+pop local 1
+push this 2
+push constant 1
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 0
+push constant 19
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 0
+return
+label IF_FALSE1
+push argument 1
+push local 0
+push constant 1
+add
+push local 1
+call Map.read 3
+push constant 0
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push argument 1
+push local 0
+push constant 1
+add
+push local 1
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 3
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 2
+push local 0
+push constant 1
+add
+call Block.setR 2
+pop temp 0
+label IF_FALSE2
+label IF_FALSE0
+push this 2
+push constant 0
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push local 0
+push constant 19
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 0
+return
+label IF_FALSE4
+push argument 1
+push local 0
+push constant 1
+add
+push local 1
+call Map.read 3
+push constant 0
+eq
+push argument 1
+push local 0
+push constant 1
+add
+push local 1
+push constant 1
+add
+call Map.read 3
+push constant 0
+eq
+and
+push argument 1
+push local 0
+push constant 1
+add
+push local 1
+push constant 2
+add
+call Map.read 3
+push constant 0
+eq
+and
+push argument 1
+push local 0
+push constant 1
+add
+push local 1
+push constant 3
+add
+call Map.read 3
+push constant 0
+eq
+and
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push argument 1
+push local 0
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 1
+add
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 2
+add
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 3
+add
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 1
+add
+push local 1
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 1
+add
+push local 1
+push constant 1
+add
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 1
+add
+push local 1
+push constant 2
+add
+call Map.set 3
+pop temp 0
+push argument 1
+push local 0
+push constant 1
+add
+push local 1
+push constant 3
+add
+call Map.set 3
+pop temp 0
+push argument 2
+push local 0
+push constant 1
+add
+call Block.setR 2
+pop temp 0
+label IF_FALSE5
+label IF_FALSE3
+push constant 0
+return
+function IBlock.I_isBottom 3
+push argument 0
+pop pointer 0
+push argument 2
+call Block.getR 1
+pop local 1
+push argument 2
+call Block.getC 1
+pop local 2
+push this 2
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 1
+push constant 19
+lt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push argument 1
+push local 1
+push constant 1
+add
+push local 2
+call Map.read 3
+push constant 1
+eq
+push argument 1
+push local 1
+push constant 1
+add
+push local 2
+push constant 1
+add
+call Map.read 3
+push constant 1
+eq
+or
+push argument 1
+push local 1
+push constant 1
+add
+push local 2
+push constant 2
+add
+call Map.read 3
+push constant 1
+eq
+or
+push argument 1
+push local 1
+push constant 1
+add
+push local 2
+push constant 3
+add
+call Map.read 3
+push constant 1
+eq
+or
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+not
+pop local 0
+goto IF_END2
+label IF_FALSE2
+push constant 0
+pop local 0
+label IF_END2
+goto IF_END1
+label IF_FALSE1
+push constant 0
+not
+pop local 0
+label IF_END1
+label IF_FALSE0
+push this 2
+push constant 1
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push local 1
+push constant 19
+lt
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push argument 1
+push local 1
+push constant 1
+add
+push local 2
+call Map.read 3
+push constant 1
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 0
+not
+pop local 0
+goto IF_END5
+label IF_FALSE5
+push constant 0
+pop local 0
+label IF_END5
+goto IF_END4
+label IF_FALSE4
+push constant 0
+not
+pop local 0
+label IF_END4
+label IF_FALSE3
+push local 0
+return
+function IBlock.clear 2
+push argument 0
+pop pointer 0
+push argument 2
+call Block.getR 1
+pop local 0
+push argument 2
+call Block.getC 1
+pop local 1
+push this 2
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push argument 1
+push local 0
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 1
+add
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 2
+add
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+push constant 3
+add
+call Map.reset 3
+pop temp 0
+label IF_FALSE0
+push this 2
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push argument 1
+push local 0
+push constant 3
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 2
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push constant 1
+sub
+push local 1
+call Map.reset 3
+pop temp 0
+push argument 1
+push local 0
+push local 1
+call Map.reset 3
+pop temp 0
+label IF_FALSE1
+push constant 0
+return

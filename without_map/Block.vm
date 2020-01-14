@@ -1,0 +1,1211 @@
+function Block.new 0
+push constant 11
+call Memory.alloc 1
+pop pointer 0
+push constant 0
+pop this 0
+push argument 1
+pop this 3
+push argument 0
+push pointer 0
+call OBlock.new 2
+pop this 7
+push argument 0
+push pointer 0
+call IBlock.new 2
+pop this 4
+push argument 0
+push pointer 0
+call ZBlock.new 2
+pop this 10
+push argument 0
+push pointer 0
+call SBlock.new 2
+pop this 8
+push argument 0
+push pointer 0
+call TBlock.new 2
+pop this 9
+push argument 0
+push pointer 0
+call JBlock.new 2
+pop this 5
+push argument 0
+push pointer 0
+call LBlock.new 2
+pop this 6
+push pointer 0
+return
+function Block.setType 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 3
+push constant 0
+return
+function Block.create_block 1
+push argument 0
+pop pointer 0
+push this 3
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 7
+push argument 1
+push pointer 0
+call OBlock.create_block 3
+pop local 0
+label IF_FALSE0
+push this 3
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 4
+push argument 1
+push pointer 0
+call IBlock.create_block 3
+pop local 0
+label IF_FALSE1
+push this 3
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 10
+push argument 1
+push pointer 0
+call ZBlock.create_block 3
+pop local 0
+label IF_FALSE2
+push this 3
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 8
+push argument 1
+push pointer 0
+call SBlock.create_block 3
+pop local 0
+label IF_FALSE3
+push this 3
+push constant 4
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 9
+push argument 1
+push pointer 0
+call TBlock.create_block 3
+pop local 0
+label IF_FALSE4
+push this 3
+push constant 5
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 5
+push argument 1
+push pointer 0
+call JBlock.create_block 3
+pop local 0
+label IF_FALSE5
+push this 3
+push constant 6
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 6
+push argument 1
+push pointer 0
+call LBlock.create_block 3
+pop local 0
+label IF_FALSE6
+push local 0
+return
+function Block.down 0
+push argument 0
+pop pointer 0
+push this 3
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 7
+push argument 1
+push pointer 0
+call OBlock.down 3
+pop temp 0
+label IF_FALSE0
+push this 3
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 4
+push argument 1
+push pointer 0
+call IBlock.down 3
+pop temp 0
+label IF_FALSE1
+push this 3
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 10
+push argument 1
+push pointer 0
+call ZBlock.down 3
+pop temp 0
+label IF_FALSE2
+push this 3
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 8
+push argument 1
+push pointer 0
+call SBlock.down 3
+pop temp 0
+label IF_FALSE3
+push this 3
+push constant 4
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 9
+push argument 1
+push pointer 0
+call TBlock.down 3
+pop temp 0
+label IF_FALSE4
+push this 3
+push constant 5
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 5
+push argument 1
+push pointer 0
+call JBlock.down 3
+pop temp 0
+label IF_FALSE5
+push this 3
+push constant 6
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 6
+push argument 1
+push pointer 0
+call LBlock.down 3
+pop temp 0
+label IF_FALSE6
+push constant 0
+return
+function Block.left 0
+push argument 0
+pop pointer 0
+push this 3
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 7
+push argument 1
+push pointer 0
+call OBlock.left 3
+pop temp 0
+label IF_FALSE0
+push this 3
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 4
+push argument 1
+push pointer 0
+call IBlock.left 3
+pop temp 0
+label IF_FALSE1
+push this 3
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 10
+push argument 1
+push pointer 0
+call ZBlock.left 3
+pop temp 0
+label IF_FALSE2
+push this 3
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 8
+push argument 1
+push pointer 0
+call SBlock.left 3
+pop temp 0
+label IF_FALSE3
+push this 3
+push constant 4
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 9
+push argument 1
+push pointer 0
+call TBlock.left 3
+pop temp 0
+label IF_FALSE4
+push this 3
+push constant 5
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 5
+push argument 1
+push pointer 0
+call JBlock.left 3
+pop temp 0
+label IF_FALSE5
+push this 3
+push constant 6
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 6
+push argument 1
+push pointer 0
+call LBlock.left 3
+pop temp 0
+label IF_FALSE6
+push constant 0
+return
+function Block.right 0
+push argument 0
+pop pointer 0
+push this 3
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 7
+push argument 1
+push pointer 0
+call OBlock.right 3
+pop temp 0
+label IF_FALSE0
+push this 3
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 4
+push argument 1
+push pointer 0
+call IBlock.right 3
+pop temp 0
+label IF_FALSE1
+push this 3
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 10
+push argument 1
+push pointer 0
+call ZBlock.right 3
+pop temp 0
+label IF_FALSE2
+push this 3
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 8
+push argument 1
+push pointer 0
+call SBlock.right 3
+pop temp 0
+label IF_FALSE3
+push this 3
+push constant 4
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 9
+push argument 1
+push pointer 0
+call TBlock.right 3
+pop temp 0
+label IF_FALSE4
+push this 3
+push constant 5
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 5
+push argument 1
+push pointer 0
+call JBlock.right 3
+pop temp 0
+label IF_FALSE5
+push this 3
+push constant 6
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 6
+push argument 1
+push pointer 0
+call LBlock.right 3
+pop temp 0
+label IF_FALSE6
+push constant 0
+return
+function Block.rotate 0
+push argument 0
+pop pointer 0
+push this 3
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+label IF_FALSE0
+push this 3
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 4
+push argument 1
+push pointer 0
+call IBlock.I_rotate 3
+pop temp 0
+label IF_FALSE1
+push this 3
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 10
+push argument 1
+push pointer 0
+call ZBlock.Z_rotate 3
+pop temp 0
+label IF_FALSE2
+push this 3
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 8
+push argument 1
+push pointer 0
+call SBlock.S_rotate 3
+pop temp 0
+label IF_FALSE3
+push this 3
+push constant 4
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 9
+push argument 1
+push pointer 0
+call TBlock.T_rotate 3
+pop temp 0
+label IF_FALSE4
+push this 3
+push constant 5
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 5
+push argument 1
+push pointer 0
+call JBlock.J_rotate 3
+pop temp 0
+label IF_FALSE5
+push this 3
+push constant 6
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 6
+push argument 1
+push pointer 0
+call LBlock.L_rotate 3
+pop temp 0
+label IF_FALSE6
+push constant 0
+return
+function Block.bottomChecker 1
+push argument 0
+pop pointer 0
+push this 3
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 7
+push argument 1
+push pointer 0
+call OBlock.O_isBottom 3
+pop local 0
+label IF_FALSE0
+push this 3
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 4
+push argument 1
+push pointer 0
+call IBlock.I_isBottom 3
+pop local 0
+label IF_FALSE1
+push this 3
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 10
+push argument 1
+push pointer 0
+call ZBlock.Z_isBottom 3
+pop local 0
+label IF_FALSE2
+push this 3
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 8
+push argument 1
+push pointer 0
+call SBlock.S_isBottom 3
+pop local 0
+label IF_FALSE3
+push this 3
+push constant 4
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 9
+push argument 1
+push pointer 0
+call TBlock.T_isBottom 3
+pop local 0
+label IF_FALSE4
+push this 3
+push constant 5
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 5
+push argument 1
+push pointer 0
+call JBlock.J_isBottom 3
+pop local 0
+label IF_FALSE5
+push this 3
+push constant 6
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 6
+push argument 1
+push pointer 0
+call LBlock.L_isBottom 3
+pop local 0
+label IF_FALSE6
+push local 0
+return
+function Block.toBottom 2
+push argument 0
+pop pointer 0
+push this 3
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 7
+push argument 1
+push pointer 0
+call OBlock.O_isBottom 3
+pop local 1
+label IF_FALSE0
+push this 3
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 4
+push argument 1
+push pointer 0
+call IBlock.I_isBottom 3
+pop local 1
+label IF_FALSE1
+push this 3
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 10
+push argument 1
+push pointer 0
+call ZBlock.Z_isBottom 3
+pop local 1
+label IF_FALSE2
+push this 3
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 8
+push argument 1
+push pointer 0
+call SBlock.S_isBottom 3
+pop local 1
+label IF_FALSE3
+push this 3
+push constant 4
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 9
+push argument 1
+push pointer 0
+call TBlock.T_isBottom 3
+pop local 1
+label IF_FALSE4
+push this 3
+push constant 5
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 5
+push argument 1
+push pointer 0
+call JBlock.J_isBottom 3
+pop local 1
+label IF_FALSE5
+push this 3
+push constant 6
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 6
+push argument 1
+push pointer 0
+call LBlock.L_isBottom 3
+pop local 1
+label IF_FALSE6
+push local 1
+pop local 0
+label WHILE_EXP0
+push local 0
+not
+not
+if-goto WHILE_END0
+push this 3
+push constant 0
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push this 7
+push argument 1
+push pointer 0
+call OBlock.O_isBottom 3
+pop local 0
+push this 7
+push argument 1
+push pointer 0
+call OBlock.down 3
+pop temp 0
+label IF_FALSE7
+push this 3
+push constant 1
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push this 4
+push argument 1
+push pointer 0
+call IBlock.I_isBottom 3
+pop local 0
+push this 4
+push argument 1
+push pointer 0
+call IBlock.down 3
+pop temp 0
+label IF_FALSE8
+push this 3
+push constant 2
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push this 10
+push argument 1
+push pointer 0
+call ZBlock.Z_isBottom 3
+pop local 0
+push this 10
+push argument 1
+push pointer 0
+call ZBlock.down 3
+pop temp 0
+label IF_FALSE9
+push this 3
+push constant 3
+eq
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push this 8
+push argument 1
+push pointer 0
+call SBlock.S_isBottom 3
+pop local 0
+push this 8
+push argument 1
+push pointer 0
+call SBlock.down 3
+pop temp 0
+label IF_FALSE10
+push this 3
+push constant 4
+eq
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push this 9
+push argument 1
+push pointer 0
+call TBlock.T_isBottom 3
+pop local 0
+push this 9
+push argument 1
+push pointer 0
+call TBlock.down 3
+pop temp 0
+label IF_FALSE11
+push this 3
+push constant 5
+eq
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push this 5
+push argument 1
+push pointer 0
+call JBlock.J_isBottom 3
+pop local 0
+push this 5
+push argument 1
+push pointer 0
+call JBlock.down 3
+pop temp 0
+label IF_FALSE12
+push this 3
+push constant 6
+eq
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push this 6
+push argument 1
+push pointer 0
+call LBlock.L_isBottom 3
+pop local 0
+push this 6
+push argument 1
+push pointer 0
+call LBlock.down 3
+pop temp 0
+label IF_FALSE13
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function Block.dispose 0
+push argument 0
+pop pointer 0
+push this 3
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 7
+call OBlock.dispose 1
+pop temp 0
+label IF_FALSE0
+push this 3
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 4
+call IBlock.dispose 1
+pop temp 0
+label IF_FALSE1
+push this 3
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 10
+call ZBlock.dispose 1
+pop temp 0
+label IF_FALSE2
+push this 3
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 8
+call SBlock.dispose 1
+pop temp 0
+label IF_FALSE3
+push this 3
+push constant 4
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 9
+call TBlock.dispose 1
+pop temp 0
+label IF_FALSE4
+push this 3
+push constant 5
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 5
+call JBlock.dispose 1
+pop temp 0
+label IF_FALSE5
+push this 3
+push constant 6
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 6
+call LBlock.dispose 1
+pop temp 0
+label IF_FALSE6
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Block.clear 0
+push argument 0
+pop pointer 0
+push this 3
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 7
+push argument 1
+push pointer 0
+call OBlock.clear 3
+pop temp 0
+label IF_FALSE0
+push this 3
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 4
+push argument 1
+push pointer 0
+call IBlock.clear 3
+pop temp 0
+label IF_FALSE1
+push this 3
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 10
+push argument 1
+push pointer 0
+call ZBlock.clear 3
+pop temp 0
+label IF_FALSE2
+push this 3
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 8
+push argument 1
+push pointer 0
+call SBlock.clear 3
+pop temp 0
+label IF_FALSE3
+push this 3
+push constant 4
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 9
+push argument 1
+push pointer 0
+call TBlock.clear 3
+pop temp 0
+label IF_FALSE4
+push this 3
+push constant 5
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 5
+push argument 1
+push pointer 0
+call JBlock.clear 3
+pop temp 0
+label IF_FALSE5
+push this 3
+push constant 6
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 6
+push argument 1
+push pointer 0
+call LBlock.clear 3
+pop temp 0
+label IF_FALSE6
+push constant 0
+return
+function Block.getI 0
+push argument 0
+pop pointer 0
+push this 4
+return
+function Block.getJ 0
+push argument 0
+pop pointer 0
+push this 5
+return
+function Block.getL 0
+push argument 0
+pop pointer 0
+push this 6
+return
+function Block.getO 0
+push argument 0
+pop pointer 0
+push this 7
+return
+function Block.getS 0
+push argument 0
+pop pointer 0
+push this 8
+return
+function Block.getT 0
+push argument 0
+pop pointer 0
+push this 9
+return
+function Block.getZ 0
+push argument 0
+pop pointer 0
+push this 10
+return
+function Block.getR 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Block.getC 0
+push argument 0
+pop pointer 0
+push this 2
+return
+function Block.setR 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 1
+push constant 0
+return
+function Block.setC 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 2
+push constant 0
+return
+function Block.Tspin 1
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+push this 3
+push constant 4
+eq
+not
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+return
+goto IF_END0
+label IF_FALSE0
+push this 9
+push argument 1
+push pointer 0
+call TBlock.T_isBottom 3
+push this 0
+and
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 1
+push constant 1
+add
+push constant 19
+gt
+push this 2
+or
+push constant 1
+add
+push constant 9
+gt
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push local 0
+push constant 1
+add
+pop local 0
+goto IF_END2
+label IF_FALSE2
+push argument 1
+push this 1
+push constant 1
+add
+push this 2
+push constant 1
+add
+call Map.read 3
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push local 0
+push constant 1
+add
+pop local 0
+label IF_FALSE3
+label IF_END2
+push this 1
+push constant 1
+add
+push constant 19
+gt
+push this 2
+or
+push constant 1
+sub
+push constant 0
+lt
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push local 0
+push constant 1
+add
+pop local 0
+goto IF_END4
+label IF_FALSE4
+push argument 1
+push this 1
+push constant 1
+add
+push this 2
+push constant 1
+sub
+call Map.read 3
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push local 0
+push constant 1
+add
+pop local 0
+label IF_FALSE5
+label IF_END4
+push this 1
+push constant 1
+sub
+push constant 0
+lt
+push this 2
+or
+push constant 1
+add
+push constant 9
+gt
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push local 0
+push constant 1
+add
+pop local 0
+goto IF_END6
+label IF_FALSE6
+push argument 1
+push this 1
+push constant 1
+sub
+push this 2
+push constant 1
+add
+call Map.read 3
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push local 0
+push constant 1
+add
+pop local 0
+label IF_FALSE7
+label IF_END6
+push this 1
+push constant 1
+sub
+push constant 0
+gt
+push this 2
+or
+push constant 1
+sub
+push constant 0
+lt
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push local 0
+push constant 1
+add
+pop local 0
+goto IF_END8
+label IF_FALSE8
+push argument 1
+push this 1
+push constant 1
+sub
+push this 2
+push constant 1
+sub
+call Map.read 3
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push local 0
+push constant 1
+add
+pop local 0
+label IF_FALSE9
+label IF_END8
+push local 0
+push constant 2
+gt
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push constant 0
+not
+return
+label IF_FALSE10
+label IF_FALSE1
+push constant 0
+return
+label IF_END0
+function Block.setLast 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 0
+push constant 0
+return

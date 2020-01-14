@@ -1,0 +1,1888 @@
+function Main.comboScore 0
+push argument 0
+push constant 1
+eq
+push argument 0
+or
+push constant 2
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 1
+return
+label IF_FALSE0
+push argument 0
+push constant 3
+eq
+push argument 0
+or
+push constant 4
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 2
+return
+label IF_FALSE1
+push argument 0
+push constant 5
+eq
+push argument 0
+or
+push constant 6
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 3
+return
+label IF_FALSE2
+push argument 0
+push constant 6
+gt
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 4
+return
+label IF_FALSE3
+push constant 0
+return
+function Main.mod500 2
+push argument 0
+push constant 500
+call Math.divide 2
+pop local 0
+push local 0
+push constant 500
+call Math.multiply 2
+pop local 0
+push argument 0
+push local 0
+sub
+pop local 1
+push local 1
+return
+function Main.Move 3
+call Keyboard.keyPressed 0
+pop local 0
+push argument 0
+push constant 1
+eq
+push local 0
+and
+push constant 131
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push argument 2
+push argument 1
+call Block.rotate 2
+pop local 1
+push local 1
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push argument 2
+push constant 0
+not
+call Block.setLast 2
+pop temp 0
+label IF_FALSE1
+label IF_FALSE0
+push argument 0
+push constant 0
+eq
+push local 0
+and
+push constant 87
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push argument 2
+push argument 1
+call Block.rotate 2
+pop local 1
+push local 1
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push argument 2
+push constant 0
+not
+call Block.setLast 2
+pop temp 0
+label IF_FALSE3
+label IF_FALSE2
+push argument 0
+push constant 1
+eq
+push local 0
+and
+push constant 130
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push argument 2
+push argument 1
+call Block.left 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE4
+push argument 0
+push constant 0
+eq
+push local 0
+and
+push constant 65
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push argument 2
+push argument 1
+call Block.left 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE5
+push argument 0
+push constant 1
+eq
+push local 0
+and
+push constant 133
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push argument 2
+push argument 1
+call Block.down 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE6
+push argument 0
+push constant 0
+eq
+push local 0
+and
+push constant 83
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push argument 2
+push argument 1
+call Block.down 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE7
+push argument 0
+push constant 1
+eq
+push local 0
+and
+push constant 132
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push argument 2
+push argument 1
+call Block.right 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE8
+push argument 0
+push constant 0
+eq
+push local 0
+and
+push constant 68
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push argument 2
+push argument 1
+call Block.right 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE9
+push argument 0
+push constant 1
+eq
+push local 0
+and
+push constant 32
+eq
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push argument 2
+push argument 1
+call Block.toBottom 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE10
+push argument 0
+push constant 0
+eq
+push local 0
+and
+push constant 88
+eq
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push argument 2
+push argument 1
+call Block.toBottom 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE11
+push argument 2
+push argument 1
+call Block.bottomChecker 2
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push constant 0
+pop local 2
+label WHILE_EXP0
+push local 2
+push constant 2000
+lt
+not
+if-goto WHILE_END0
+call Keyboard.keyPressed 0
+pop local 0
+push argument 0
+push constant 1
+eq
+push local 0
+and
+push constant 131
+eq
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push argument 2
+push argument 1
+call Block.rotate 2
+pop local 1
+push local 1
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+push argument 2
+push constant 0
+not
+call Block.setLast 2
+pop temp 0
+label IF_FALSE14
+label IF_FALSE13
+push argument 0
+push constant 0
+eq
+push local 0
+and
+push constant 87
+eq
+if-goto IF_TRUE15
+goto IF_FALSE15
+label IF_TRUE15
+push argument 2
+push argument 1
+call Block.rotate 2
+pop local 1
+push local 1
+if-goto IF_TRUE16
+goto IF_FALSE16
+label IF_TRUE16
+push argument 2
+push constant 0
+not
+call Block.setLast 2
+pop temp 0
+label IF_FALSE16
+label IF_FALSE15
+push argument 0
+push constant 1
+eq
+push local 0
+and
+push constant 130
+eq
+if-goto IF_TRUE17
+goto IF_FALSE17
+label IF_TRUE17
+push argument 2
+push argument 1
+call Block.left 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE17
+push argument 0
+push constant 0
+eq
+push local 0
+and
+push constant 65
+eq
+if-goto IF_TRUE18
+goto IF_FALSE18
+label IF_TRUE18
+push argument 2
+push argument 1
+call Block.left 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE18
+push argument 0
+push constant 1
+eq
+push local 0
+and
+push constant 133
+eq
+if-goto IF_TRUE19
+goto IF_FALSE19
+label IF_TRUE19
+push argument 2
+push argument 1
+call Block.down 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE19
+push argument 0
+push constant 0
+eq
+push local 0
+and
+push constant 83
+eq
+if-goto IF_TRUE20
+goto IF_FALSE20
+label IF_TRUE20
+push argument 2
+push argument 1
+call Block.down 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE20
+push argument 0
+push constant 1
+eq
+push local 0
+and
+push constant 132
+eq
+if-goto IF_TRUE21
+goto IF_FALSE21
+label IF_TRUE21
+push argument 2
+push argument 1
+call Block.right 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE21
+push argument 0
+push constant 0
+eq
+push local 0
+and
+push constant 68
+eq
+if-goto IF_TRUE22
+goto IF_FALSE22
+label IF_TRUE22
+push argument 2
+push argument 1
+call Block.right 2
+pop temp 0
+push argument 2
+push constant 0
+call Block.setLast 2
+pop temp 0
+label IF_FALSE22
+push local 2
+push constant 1
+add
+pop local 2
+goto WHILE_EXP0
+label WHILE_END0
+push argument 2
+push argument 1
+call Block.bottomChecker 2
+if-goto IF_TRUE23
+goto IF_FALSE23
+label IF_TRUE23
+push argument 1
+call Map.proc 1
+return
+goto IF_END23
+label IF_FALSE23
+push constant 1
+neg
+return
+label IF_END23
+goto IF_END12
+label IF_FALSE12
+push constant 1
+neg
+return
+label IF_END12
+function Main.Bonus 1
+push constant 0
+pop local 0
+push argument 3
+push constant 1
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 30
+pop local 0
+label IF_FALSE0
+push constant 15
+push constant 24
+push local 0
+add
+call Output.moveCursor 2
+pop temp 0
+push argument 0
+push constant 0
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push argument 1
+push constant 0
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push argument 2
+push constant 2
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 6
+call String.new 1
+push constant 68
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 85
+call String.appendChar 2
+push constant 66
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 1
+return
+label IF_FALSE3
+push argument 2
+push constant 3
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 6
+call String.new 1
+push constant 84
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 80
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 2
+return
+label IF_FALSE4
+push argument 2
+push constant 4
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 7
+call String.new 1
+push constant 84
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 84
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 4
+return
+label IF_FALSE5
+label IF_FALSE2
+push argument 1
+push constant 1
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push argument 2
+push constant 0
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 6
+call String.new 1
+push constant 84
+call String.appendChar 2
+push constant 45
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 80
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 16
+push constant 25
+push local 0
+add
+call Output.moveCursor 2
+pop temp 0
+push constant 4
+call String.new 1
+push constant 77
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+call Output.printSting 1
+pop temp 0
+push constant 1
+return
+label IF_FALSE7
+push argument 2
+push constant 1
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 6
+call String.new 1
+push constant 84
+call String.appendChar 2
+push constant 45
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 80
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 16
+push constant 25
+push local 0
+add
+call Output.moveCursor 2
+pop temp 0
+push constant 4
+call String.new 1
+push constant 77
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+call Output.printSting 1
+pop temp 0
+push constant 2
+return
+label IF_FALSE8
+push argument 2
+push constant 2
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push constant 6
+call String.new 1
+push constant 84
+call String.appendChar 2
+push constant 45
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 80
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 16
+push constant 25
+push local 0
+add
+call Output.moveCursor 2
+pop temp 0
+push constant 4
+call String.new 1
+push constant 77
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+call Output.printSting 1
+pop temp 0
+push constant 4
+return
+label IF_FALSE9
+push argument 2
+push constant 3
+eq
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push constant 6
+call String.new 1
+push constant 84
+call String.appendChar 2
+push constant 45
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 80
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 16
+push constant 25
+push local 0
+add
+call Output.moveCursor 2
+pop temp 0
+push constant 4
+call String.new 1
+push constant 77
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+call Output.printSting 1
+pop temp 0
+push constant 6
+return
+label IF_FALSE10
+label IF_FALSE6
+label IF_FALSE1
+push argument 0
+push constant 1
+eq
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push constant 3
+call String.new 1
+push constant 66
+call String.appendChar 2
+push constant 50
+call String.appendChar 2
+push constant 66
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push argument 2
+push constant 4
+eq
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push constant 6
+return
+label IF_FALSE12
+push argument 1
+push constant 1
+eq
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push argument 2
+push constant 0
+eq
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+push constant 2
+return
+label IF_FALSE14
+push argument 2
+push constant 1
+eq
+if-goto IF_TRUE15
+goto IF_FALSE15
+label IF_TRUE15
+push constant 3
+return
+label IF_FALSE15
+push argument 2
+push constant 2
+eq
+if-goto IF_TRUE16
+goto IF_FALSE16
+label IF_TRUE16
+push constant 6
+return
+label IF_FALSE16
+push argument 2
+push constant 3
+eq
+if-goto IF_TRUE17
+goto IF_FALSE17
+label IF_TRUE17
+push constant 9
+return
+label IF_FALSE17
+label IF_FALSE13
+label IF_FALSE11
+push constant 0
+return
+function Main.Play 31
+push constant 20
+call String.new 1
+pop local 4
+push constant 20
+call String.new 1
+pop local 5
+call Screen.clearScreen 0
+pop temp 0
+push constant 9
+push constant 22
+call Output.moveCursor 2
+pop temp 0
+push constant 19
+call String.new 1
+push constant 80
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 89
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 90
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 77
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 58
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Keyboard.readLine 1
+pop local 4
+push constant 12
+push constant 22
+call Output.moveCursor 2
+pop temp 0
+push constant 18
+call String.new 1
+push constant 80
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 89
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 77
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 58
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Keyboard.readLine 1
+pop local 5
+call Display.gameScreen 0
+pop temp 0
+push constant 0
+pop local 26
+call Clock.new 0
+pop local 25
+push local 25
+push constant 100
+call Clock.setTime 2
+pop temp 0
+push constant 0
+pop local 24
+push constant 0
+call Playa.new 1
+pop local 0
+push constant 1
+call Playa.new 1
+pop local 1
+call Map.new 0
+pop local 2
+call Map.new 0
+pop local 3
+push constant 7
+pop local 18
+push constant 7
+pop local 19
+push constant 0
+pop local 20
+push constant 0
+pop local 21
+push constant 0
+call Random.setSeed 1
+pop temp 0
+push constant 6
+call Random.randRange 1
+pop local 8
+push constant 1
+call Random.setSeed 1
+pop temp 0
+push constant 6
+call Random.randRange 1
+pop local 9
+push constant 2
+call Random.setSeed 1
+pop temp 0
+push constant 6
+call Random.randRange 1
+pop local 10
+push constant 3
+call Random.setSeed 1
+pop temp 0
+push constant 6
+call Random.randRange 1
+pop local 11
+push local 2
+push local 8
+call Block.new 2
+pop local 6
+push local 3
+push local 9
+call Block.new 2
+pop local 7
+push local 6
+push local 2
+call Block.create_block 2
+pop local 14
+push local 7
+push local 3
+call Block.create_block 2
+pop local 15
+push constant 0
+push local 10
+call Display.showNext 2
+pop temp 0
+push constant 1
+push local 11
+call Display.showNext 2
+pop temp 0
+label WHILE_EXP0
+push local 26
+push constant 240
+lt
+push local 24
+not
+and
+not
+if-goto WHILE_END0
+push constant 0
+push local 2
+push local 6
+call Main.Move 3
+pop local 12
+push local 12
+push constant 1
+gt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 0
+push local 12
+call Playa.addLinesSent 2
+pop temp 0
+label IF_FALSE0
+push constant 1
+push local 3
+push local 7
+call Main.Move 3
+pop local 13
+push local 13
+push constant 1
+gt
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push local 1
+push local 13
+call Playa.addLinesSent 2
+pop temp 0
+label IF_FALSE1
+push local 25
+call Clock.getTime 1
+call Main.mod500 1
+push constant 0
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push local 6
+push local 2
+call Block.down 2
+pop temp 0
+push local 6
+push constant 0
+call Block.setLast 2
+pop temp 0
+push local 7
+push local 3
+call Block.down 2
+pop temp 0
+push local 7
+push constant 0
+call Block.setLast 2
+pop temp 0
+push local 25
+call Clock.getTime 1
+push constant 30000
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push local 25
+push constant 0
+call Clock.setTime 2
+pop temp 0
+label IF_FALSE3
+push local 26
+push constant 1
+add
+pop local 26
+label IF_FALSE2
+call Keyboard.keyPressed 0
+pop local 29
+push local 29
+push constant 67
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push local 6
+push local 2
+call Block.clear 2
+pop temp 0
+push local 18
+push constant 7
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push local 9
+push local 25
+call Clock.getTime 1
+add
+call Random.setSeed 1
+pop temp 0
+push local 8
+pop local 18
+push local 10
+pop local 8
+push constant 6
+call Random.randRange 1
+pop local 10
+goto IF_END5
+label IF_FALSE5
+push local 8
+pop local 30
+push local 18
+pop local 8
+push local 30
+pop local 18
+label IF_END5
+push local 6
+push local 8
+call Block.setType 2
+pop temp 0
+push local 6
+push local 2
+call Block.create_block 2
+pop local 14
+push constant 0
+push local 18
+call Display.showHold 2
+pop temp 0
+label IF_FALSE4
+call Keyboard.keyPressed 0
+pop local 29
+push local 29
+push constant 47
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push local 7
+push local 3
+call Block.clear 2
+pop temp 0
+push local 19
+push constant 7
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push local 8
+push local 25
+call Clock.getTime 1
+add
+call Random.setSeed 1
+pop temp 0
+push local 9
+pop local 19
+push local 11
+pop local 9
+push constant 6
+call Random.randRange 1
+pop local 11
+goto IF_END7
+label IF_FALSE7
+push local 9
+pop local 30
+push local 19
+pop local 9
+push local 30
+pop local 19
+label IF_END7
+push local 7
+push local 9
+call Block.setType 2
+pop temp 0
+push local 7
+push local 3
+call Block.create_block 2
+pop local 15
+push constant 1
+push local 19
+call Display.showHold 2
+pop temp 0
+label IF_FALSE6
+push local 2
+push constant 0
+call Map.showMap 2
+pop temp 0
+push local 3
+push constant 1
+call Map.showMap 2
+pop temp 0
+push local 0
+push local 1
+call Display.showScores 2
+pop temp 0
+push local 12
+push constant 1
+neg
+gt
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push constant 191
+push constant 160
+push constant 247
+push constant 180
+call Screen.drawRectangle 4
+pop temp 0
+push local 12
+push constant 0
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push local 0
+call Playa.resetCombo 1
+pop temp 0
+goto IF_END9
+label IF_FALSE9
+push local 0
+call Playa.incCombo 1
+pop temp 0
+label IF_END9
+push local 12
+push constant 0
+gt
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push local 6
+push local 2
+call Block.Tspin 2
+pop local 22
+push local 0
+call Playa.getCombo 1
+call Main.comboScore 1
+push local 20
+push local 22
+push local 12
+push constant 0
+call Main.Bonus 4
+add
+pop local 12
+push local 22
+push local 12
+push constant 3
+gt
+or
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push constant 1
+pop local 20
+goto IF_END11
+label IF_FALSE11
+push constant 0
+pop local 20
+label IF_END11
+push local 2
+call Map.getHeight 1
+push constant 0
+eq
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push local 12
+push constant 10
+add
+pop local 12
+label IF_FALSE12
+label IF_FALSE10
+push local 0
+call Playa.getLinesReceived 1
+push local 12
+gt
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push local 0
+push local 12
+neg
+call Playa.addLinesReceived 2
+pop temp 0
+push local 0
+push local 2
+call Playa.getGarbage 2
+pop local 16
+goto IF_END13
+label IF_FALSE13
+push local 12
+push local 0
+call Playa.getLinesReceived 1
+sub
+pop local 12
+label IF_END13
+push local 0
+call Playa.resetLinesReceived 1
+pop temp 0
+push local 9
+push local 8
+add
+push local 25
+call Clock.getTime 1
+add
+call Random.setSeed 1
+pop temp 0
+push local 10
+pop local 8
+push constant 6
+call Random.randRange 1
+pop local 10
+push local 6
+push local 8
+call Block.setType 2
+pop temp 0
+push local 6
+push local 2
+call Block.create_block 2
+pop local 14
+push constant 0
+push local 10
+call Display.showNext 2
+pop temp 0
+label IF_FALSE8
+push local 13
+push constant 1
+neg
+gt
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push constant 431
+push constant 160
+push constant 487
+push constant 180
+call Screen.drawRectangle 4
+pop temp 0
+push local 13
+push constant 0
+eq
+if-goto IF_TRUE15
+goto IF_FALSE15
+label IF_TRUE15
+push local 1
+call Playa.resetCombo 1
+pop temp 0
+goto IF_END15
+label IF_FALSE15
+push local 1
+call Playa.incCombo 1
+pop temp 0
+label IF_END15
+push local 13
+push constant 0
+gt
+if-goto IF_TRUE16
+goto IF_FALSE16
+label IF_TRUE16
+push local 7
+push local 3
+call Block.Tspin 2
+pop local 23
+push local 1
+call Playa.getCombo 1
+call Main.comboScore 1
+push local 21
+push local 23
+push local 13
+push constant 1
+call Main.Bonus 4
+add
+pop local 13
+push local 23
+push local 13
+push constant 3
+gt
+or
+if-goto IF_TRUE17
+goto IF_FALSE17
+label IF_TRUE17
+push constant 1
+pop local 21
+goto IF_END17
+label IF_FALSE17
+push constant 0
+pop local 21
+label IF_END17
+push local 3
+call Map.getHeight 1
+push constant 1
+eq
+if-goto IF_TRUE18
+goto IF_FALSE18
+label IF_TRUE18
+push local 13
+push constant 10
+add
+pop local 13
+label IF_FALSE18
+label IF_FALSE16
+push local 1
+call Playa.getLinesReceived 1
+push local 13
+gt
+if-goto IF_TRUE19
+goto IF_FALSE19
+label IF_TRUE19
+push local 1
+push local 13
+neg
+call Playa.addLinesReceived 2
+pop temp 0
+push local 1
+push local 3
+call Playa.getGarbage 2
+pop local 17
+goto IF_END19
+label IF_FALSE19
+push local 13
+push local 1
+call Playa.getLinesReceived 1
+sub
+pop local 13
+label IF_END19
+push local 1
+call Playa.resetLinesReceived 1
+pop temp 0
+push local 8
+push local 9
+add
+push local 25
+call Clock.getTime 1
+add
+call Random.setSeed 1
+pop temp 0
+push local 11
+pop local 9
+push constant 6
+call Random.randRange 1
+pop local 11
+push local 7
+push local 9
+call Block.setType 2
+pop temp 0
+push local 7
+push local 3
+call Block.create_block 2
+pop local 15
+push constant 1
+push local 11
+call Display.showNext 2
+pop temp 0
+label IF_FALSE14
+push local 12
+push constant 0
+gt
+if-goto IF_TRUE20
+goto IF_FALSE20
+label IF_TRUE20
+push local 1
+push local 12
+call Playa.addLinesReceived 2
+pop temp 0
+label IF_FALSE20
+push local 13
+push constant 0
+gt
+if-goto IF_TRUE21
+goto IF_FALSE21
+label IF_TRUE21
+push local 0
+push local 13
+call Playa.addLinesReceived 2
+pop temp 0
+label IF_FALSE21
+push local 25
+push constant 100
+call Clock.tick 2
+pop temp 0
+push local 16
+push constant 1
+neg
+eq
+if-goto IF_TRUE22
+goto IF_FALSE22
+label IF_TRUE22
+push local 1
+call Playa.incKO 1
+pop temp 0
+push local 0
+push local 2
+call Playa.clearGarbage 2
+pop temp 0
+push constant 0
+pop local 16
+label IF_FALSE22
+push local 14
+push constant 0
+eq
+if-goto IF_TRUE23
+goto IF_FALSE23
+label IF_TRUE23
+push local 1
+call Playa.incKO 1
+pop temp 0
+push local 2
+call Map.clear 1
+pop temp 0
+push local 6
+push local 2
+call Block.create_block 2
+pop local 14
+label IF_FALSE23
+push local 17
+push constant 1
+neg
+eq
+if-goto IF_TRUE24
+goto IF_FALSE24
+label IF_TRUE24
+push local 0
+call Playa.incKO 1
+pop temp 0
+push local 1
+push local 3
+call Playa.clearGarbage 2
+pop temp 0
+push constant 0
+pop local 17
+label IF_FALSE24
+push local 15
+push constant 0
+eq
+if-goto IF_TRUE25
+goto IF_FALSE25
+label IF_TRUE25
+push local 0
+call Playa.incKO 1
+pop temp 0
+push local 3
+call Map.clear 1
+pop temp 0
+push local 7
+push local 3
+call Block.create_block 2
+pop local 15
+label IF_FALSE25
+push local 0
+call Playa.getKO 1
+push constant 4
+gt
+push local 1
+call Playa.getKO 1
+push constant 4
+gt
+or
+pop local 24
+goto WHILE_EXP0
+label WHILE_END0
+push constant 1
+pop local 28
+call Screen.clearScreen 0
+pop temp 0
+push local 0
+call Playa.getKO 1
+push local 1
+call Playa.getKO 1
+gt
+if-goto IF_TRUE26
+goto IF_FALSE26
+label IF_TRUE26
+push constant 0
+pop local 27
+push constant 0
+pop local 28
+label IF_FALSE26
+push local 0
+call Playa.getKO 1
+push local 1
+call Playa.getKO 1
+lt
+if-goto IF_TRUE27
+goto IF_FALSE27
+label IF_TRUE27
+push constant 1
+pop local 27
+push constant 0
+pop local 28
+label IF_FALSE27
+push local 0
+call Playa.getKO 1
+push local 1
+call Playa.getKO 1
+eq
+push local 0
+call Playa.getLinesSent 1
+push local 1
+call Playa.getLinesSent 1
+gt
+and
+if-goto IF_TRUE28
+goto IF_FALSE28
+label IF_TRUE28
+push constant 0
+pop local 27
+push constant 0
+pop local 28
+label IF_FALSE28
+push local 0
+call Playa.getKO 1
+push local 1
+call Playa.getKO 1
+eq
+push local 0
+call Playa.getLinesSent 1
+push local 1
+call Playa.getLinesSent 1
+lt
+and
+if-goto IF_TRUE29
+goto IF_FALSE29
+label IF_TRUE29
+push constant 1
+pop local 27
+push constant 0
+pop local 28
+label IF_FALSE29
+push local 0
+call Playa.getKO 1
+push local 1
+call Playa.getKO 1
+eq
+push local 0
+call Playa.getLinesSent 1
+push local 1
+call Playa.getLinesSent 1
+eq
+and
+push local 2
+call Map.getHeight 1
+push local 3
+call Map.getHeight 1
+lt
+and
+if-goto IF_TRUE30
+goto IF_FALSE30
+label IF_TRUE30
+push constant 0
+pop local 27
+push constant 0
+pop local 28
+label IF_FALSE30
+push local 0
+call Playa.getKO 1
+push local 1
+call Playa.getKO 1
+eq
+push local 0
+call Playa.getLinesSent 1
+push local 1
+call Playa.getLinesSent 1
+eq
+and
+push local 2
+call Map.getHeight 1
+push local 3
+call Map.getHeight 1
+gt
+and
+if-goto IF_TRUE31
+goto IF_FALSE31
+label IF_TRUE31
+push constant 1
+pop local 27
+push constant 0
+pop local 28
+label IF_FALSE31
+push local 28
+push constant 0
+eq
+if-goto IF_TRUE32
+goto IF_FALSE32
+label IF_TRUE32
+push constant 10
+push constant 28
+call Output.moveCursor 2
+pop temp 0
+push constant 7
+call String.new 1
+push constant 80
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 89
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push local 27
+call Output.printInt 1
+pop temp 0
+push constant 12
+push constant 30
+call Output.moveCursor 2
+pop temp 0
+push local 27
+push constant 0
+eq
+if-goto IF_TRUE33
+goto IF_FALSE33
+label IF_TRUE33
+push local 4
+call Output.printString 1
+pop temp 0
+label IF_FALSE33
+push local 27
+push constant 1
+eq
+if-goto IF_TRUE34
+goto IF_FALSE34
+label IF_TRUE34
+push local 5
+call Output.printString 1
+pop temp 0
+label IF_FALSE34
+push constant 14
+push constant 29
+call Output.moveCursor 2
+pop temp 0
+push constant 6
+call String.new 1
+push constant 32
+call String.appendChar 2
+push constant 87
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+goto IF_END32
+label IF_FALSE32
+push constant 10
+push constant 26
+call Output.moveCursor 2
+pop temp 0
+push constant 12
+call String.new 1
+push constant 73
+call String.appendChar 2
+push constant 84
+call String.appendChar 2
+push constant 39
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 68
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 87
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+label IF_END32
+push constant 1000
+call Sys.wait 1
+pop temp 0
+label WHILE_EXP1
+push local 29
+push constant 128
+eq
+not
+if-goto WHILE_END1
+call Keyboard.keyPressed 0
+pop local 29
+goto WHILE_EXP1
+label WHILE_END1
+push constant 0
+return
+function Main.TitleScreen 5
+push constant 1
+pop local 3
+push constant 0
+pop local 2
+push constant 20
+call String.new 1
+pop local 0
+push constant 20
+call String.new 1
+pop local 1
+push constant 0
+pop local 4
+label WHILE_EXP0
+push local 4
+push constant 128
+eq
+not
+not
+if-goto WHILE_END0
+push constant 1
+push local 3
+sub
+pop local 3
+push local 3
+call Display.titleScreen 1
+pop temp 0
+call Keyboard.readChar 0
+pop local 4
+goto WHILE_EXP0
+label WHILE_END0
+push local 3
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+call Main.Play 0
+pop temp 0
+goto IF_END0
+label IF_FALSE0
+push constant 1
+pop local 2
+label IF_END0
+push local 2
+return
+function Main.main 1
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push constant 0
+eq
+not
+if-goto WHILE_END0
+call Main.TitleScreen 0
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
